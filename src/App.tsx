@@ -1,9 +1,9 @@
-import UseToggleContainer from "./components/UseToggleContainer";
+import UseCopyToClipboardContainer from "./components/UseCopyToClipboardContainer";
 
 function App() {
   return (
     <>
-      <UseToggleContainer />
+      <UseCopyToClipboardContainer />
     </>
   );
 }
