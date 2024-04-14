@@ -4,6 +4,10 @@
 
 .primary-button {
   @apply bg-orange-400 text-black p-4 w-max rounded-md;
+
+  &:disabled {
+    @apply bg-gray-300 text-black/30;
+  }
 }
 
 .container {

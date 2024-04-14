@@ -1,9 +1,9 @@
-import UseCopyToClipboardContainer from "./components/UseCopyToClipboardContainer";
+import UseQueueContainer from "./components/UseQueueContainer";
 
 function App() {
   return (
     <>
-      <UseCopyToClipboardContainer />
+      <UseQueueContainer />
     </>
   );
 }
