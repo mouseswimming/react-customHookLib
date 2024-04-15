@@ -1,9 +1,8 @@
-import UseQueueContainer from "./components/UseQueueContainer";
-
+import UseListContainer from "./components/UseListContainer";
 function App() {
   return (
     <>
-      <UseQueueContainer />
+      <UseListContainer />
     </>
   );
 }
