@@ -22,37 +22,50 @@ export default function UseObjectStateContainer() {
     }));
   };
 
+  const addChampion = () => {
+    setStats((s) => ({
+      championships: s.championships + 1,
+    }));
+  };
+
   const reset = () => {
     setStats(initialState);
   };
   return (
-    <section>
+    <section className="m-auto w-max grid justify-center">
       <h1>useObjectState</h1>
 
       <div className="flex gap-x-2">
-        <button className="border bg-green-700 rounded-md" onClick={addWin}>
+        <button className="border bg-green-700 rounded-md p-2" onClick={addWin}>
           Add Win
         </button>
-        <button className="border bg-green-700 rounded-md" onClick={addLoss}>
+        <button
+          className="border bg-green-700 rounded-md p-2"
+          onClick={addLoss}
+        >
           Add Loss
         </button>
 
         <button
-          className="border bg-green-700 rounded-md"
-          onClick={() => alert("lol")}
+          className="border bg-green-700 rounded-md p-2"
+          onClick={addChampion}
         >
           Add Championship
         </button>
-        <button className="border bg-green-700 rounded-md" onClick={reset}>
+        <button className="border bg-green-700 rounded-md p-2" onClick={reset}>
           Reset
         </button>
       </div>
 
-      <table>
+      <table className="mt-6 text-center">
         <thead>
           <tr>
             {Object.keys(stats).map((key) => {
-              return <th>{key}</th>;
+              return (
+                <th className="border py-2 px-4" key={key}>
+                  {key}
+                </th>
+              );
             })}
           </tr>
         </thead>
@@ -60,7 +73,9 @@ export default function UseObjectStateContainer() {
           <tr>
             {Object.keys(stats).map((key) => {
               const value = stats[key as keyof typeof stats];
-              return <td>{`${value}`}</td>;
+              return (
+                <td className="border py-2 px-4" key={value}>{`${value}`}</td>
+              );
             })}
           </tr>
         </tbody>

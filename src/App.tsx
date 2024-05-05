@@ -1,8 +1,8 @@
-import UseListContainer from "./components/UseListContainer";
+import UseDebounceContainer from "./components/UseDebounceContainer";
 function App() {
   return (
     <>
-      <UseListContainer />
+      <UseDebounceContainer />
     </>
   );
 }
